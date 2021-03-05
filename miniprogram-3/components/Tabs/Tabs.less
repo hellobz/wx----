@@ -1,0 +1,24 @@
+.tabs {
+    .tabs_title {
+        // 这里是为了让元素水平放置
+        display: flex;
+
+
+        .title_item {
+            // 这里是为了让每个各占一等分,平均分布
+            flex: 1;
+            // 这里是为了让文字居中
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15rpx 0;
+        }
+
+        .active {
+            color: #993581;
+            border-bottom: 5rpx solid currentColor;
+        }
+    }
+
+    .tabs-content {}
+}

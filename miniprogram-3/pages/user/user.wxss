@@ -1,0 +1,135 @@
+page{
+  background-color: #edece8;
+}
+.user_info_contain{
+  position: relative;
+  height:50vh;
+  overflow: hidden;
+  background-color: pink;
+}
+.user_info_contain .user_img_group{
+  position:relative;
+}
+
+.user_btn{
+  position: absolute;
+  top:40%;
+  left:50%;
+  transform:translateX(-50%);
+  color:#fff;
+  font-size:38rpx;
+  padding:20rpx;
+  background-color: teal;
+  width: 240rpx;
+  text-align: center;
+  border-radius: 8rpx;
+}
+
+.user_info_contain .user_img_group .bg_item{
+  height:50vh;
+  filter: blur(10px);
+}
+.user_info_contain .user_img_group .user_info_photo{
+    position: absolute;
+    top:30%;
+    left:50%;
+    height:260rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    transform:translateX(-50%);
+    /* text-align: center; */
+}
+.user_info_contain .user_info_photo .photo_item{
+    width: 120rpx;
+    height:120rpx;
+    border-radius: 50%;  
+}
+.user_info_contain .user_info_photo .user_nickname{
+    color:#fff;
+    font-size:40rpx;
+}
+
+
+.user_content{
+  position:relative; 
+}
+
+.user_content .user_main{
+  position:absolute;
+  width:90%;
+  left:50%;
+  transform:translateX(-50%);
+  top:-40rpx;
+  color:#666;
+}
+.user_content .user_main .his_group{
+    background-color: #fff;
+    display:flex;
+}
+.user_content .user_main .his_group navigator{
+    flex:1;
+    text-align: center;
+    padding:10rpx 0;
+}
+.user_content .user_main .his_group navigator .all_num{
+    color:red;
+}
+.user_content .user_main .his_group navigator .all_name{
+
+}
+
+/* 订单 */
+.orders_group{
+    background-color: #fff;
+    margin-top:30rpx;
+}
+.orders_group .order_title{
+    padding:20rpx;
+    border-bottom:1rpx solid #ccc;
+}
+.orders_group .order_content{
+    display:flex;
+}
+.orders_group .order_content navigator{
+  flex:1;
+  text-align: center;
+  padding:15rpx 0;
+}
+.orders_group .order_content navigator .iconfont{
+    color:red;
+    font-size:40rpx;
+}
+.orders_group .order_content navigator .order_name{
+
+}
+
+/* 收货地址管理 */
+.address_wrap{
+  margin-top:20rpx;
+  background-color: #fff;
+  padding:20rpx 15rpx;
+}
+
+/* 应用信息相关 */
+.info_group{
+  margin-top:20rpx;
+}
+.info_group .info_contact{ 
+  display:flex;
+  justify-content: space-between;
+}
+.info_item{
+  border-bottom:1rpx solid #ccc;
+  padding:20rpx 15rpx;  
+  background-color:#fff;
+}
+
+/* 推荐 */
+.recommend_wrap{
+  margin-top:20rpx;
+  margin-bottom:45rpx;
+  background-color: #fff;
+  padding:20rpx 15rpx;
+}

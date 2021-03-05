@@ -1,0 +1,41 @@
+/* pages/goods_list/goods_list.wxss */
+view {
+  color: var(--themeColor);
+}
+
+.goods_list .goods-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+.goods_list .goods-item .goods_left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods_list .goods-item .goods_left image {
+  width: 70%;
+  height:40%;
+}
+
+.goods_list .goods-item .goods_right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.goods_list .goods-item .goods_right .g_d_cons {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  color:#333;
+}
+
+.goods_list .goods-item .goods_right .g_d_price {
+  color: red;
+  font-size: 32rpx;
+}

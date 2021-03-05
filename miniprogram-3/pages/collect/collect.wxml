@@ -1,0 +1,25 @@
+<Tabs tabs="{{tabs}}" bindtabsItemChange="handleTabsItemChange">
+  <view class="info_list">
+      <text wx:for="{{info1}}" wx:key="index" bindtap="handleChangeStyle" data-index="{{index}}"  class="info_item {{index === id?'active':''}}">{{item}}</text>
+  </view>
+
+  <view class="cart_main">
+    <!-- 当info数组 长度不为0 显示商品信息 否则显示提示 -->  
+        <!-- 商品图片 -->
+        <navigator class="goods-item" wx:for="{{collect}}" wx:key="goods_id" url="/pages/goos_detail/goos_detail?goods_id={{item.goods_id}}">
+             <!--左侧图片-->
+             <view class="goods_left">
+              <image mode="widthFix" src="{{!item.goods_small_logo?'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598972608308&di=1b15f32c53b5e722234fb17bd6af14e7&imgtype=0&src=http%3A%2F%2Fimage1.suning.cn%2Fuimg%2Fb2c%2Fnewcatentries%2F0070172171-000000000826256737_1_220x220.jpg%3Fver%3D2013':item.goods_small_logo}}"></image>
+          </view>
+          <!-- 右边商品 -->
+          <view class="goods_right">
+              <view class="g_d_cons">
+                  {{item.goods_name}}
+              </view>
+              <text class="g_d_price">
+                  ￥{{item.goods_price}}
+              </text>
+          </view>
+        </navigator>       
+  </view>
+</Tabs>

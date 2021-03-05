@@ -1,0 +1,124 @@
+/* pages/goos_detail/goos_detail.wxss */
+/* 用固定定位挡住页面的内容了 */
+page{
+  padding-bottom:90rpx;
+}
+.detail_swiper{
+
+}
+.detail_swiper swiper{
+  height:60vw;
+  text-align: center;
+}
+.detail_swiper swiper image{
+    width:60%
+}
+
+/* 商品价格 */
+.goods_price{
+  color:red;
+  padding:15rpx;
+  font-size:32rpx;
+  font-weight:600;
+}
+
+.goods_item_group{
+    display: flex;
+    border-top:5rpx solid #dedede;
+    border-bottom: 12rpx solid #F1EDF2;
+    padding:10rpx 0;
+}
+.goods_item_group .goods_name{
+    flex:5;
+    font-size:26rpx;
+    line-height: 40rpx;
+    padding: 0 10px;
+
+    /* 小圆点 */
+    display: -webkit-box;
+    overflow:hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+.goods_item_group .goods_collect{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-left:1rpx solid #000;
+}
+.goods_item_group .goods_collect .icon-shoucang1{
+      color:red;
+}
+.goods_item_group .goods_collect .iconfont{
+  
+}
+.goods_item_group .goods_collect .name_item{
+
+}
+
+/* 图文详情 */
+.goods_info{
+
+}
+.goods_info .goods_info_title{
+    font-size:32rpx;
+    font-weight:600;
+    color:red;
+    padding:20rpx;
+}
+.goods_info .goods_info_content{
+
+}
+
+/* 底部工具栏 */
+.bt_tool{
+  border-top:1rpx solid #ccc;
+  width: 100%;
+  height: 90rpx;
+  background-color: #fff;
+  position: fixed;
+  left:0;
+  bottom: 0;
+  display: flex;
+}
+.bt_tool .tool_item{
+  position: relative;
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size:24rpx;
+}
+.bt_tool .tool_item button{
+  position: absolute;
+  top:0;
+  left:0;
+  width: 100%;
+  height:100%;
+  opacity:0;
+}
+.bt_tool .join_cart{
+    height: 100%;
+    flex:2;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffa500;
+    color:#fff;
+    font-size:30rpx;
+    font-weight:600;
+}
+.bt_tool .buy_count{
+  height: 100%;
+  flex:2;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #eb4450;
+  color:#fff;
+  font-size:30rpx;
+  font-weight:600;
+}

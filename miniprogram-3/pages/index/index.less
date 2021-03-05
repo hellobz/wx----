@@ -1,0 +1,89 @@
+view {
+    /*使用 主题颜色*/
+    color: var(--themeColor);
+
+}
+
+/*轮播图*/
+swiper {
+    /*看原图 默认100% 为750rpx 340px 图片对应340rpx*/
+    width: 750rpx;
+    height: 340rpx;
+
+    image {
+        width: 100%;
+    }
+}
+
+/*分类*/
+.classify {
+    display: flex;
+
+    navigator {
+        flex: 1;
+        padding: 20rpx;
+
+        image {
+            width: 100%;
+        }
+    }
+}
+
+/*楼层*/
+.index_floor {
+    .floor_group {
+
+        .floor_title {
+            padding: 10rpx 0;
+
+            /*解决图片有点小问题 宽一整行的宽 高自己等比例的变化*/
+            image {
+                width: 100%;
+            }
+        }
+
+        .floor_contain {
+            //清除浮动
+            // overflow: hidden;
+
+            /*第一个特点每一个宽都是容器的三分之一 第二个后面的图片等于第一个图片的二分之一*/
+
+            navigator {
+                /*采用左浮动 宽百分之33.33 各占三分之一*/
+                float: left;
+                width: 33.33%;
+
+                /*里面图片跟它父级一样大*/
+                /*后四个超链接*/
+                // &:nth-last-child(-n+4){
+                //     height:33.33vw *386/232/2
+                // }
+
+                /*用class方式可以 index===2?'child':'',index===3?'child':''*/
+
+                /*2 3两个超链接*/
+                &:nth-child(2),
+                &:nth-child(3) {
+                    border-bottom: 10rpx solid #fff;
+                }
+
+                image {
+                    /*出现一个问题 这些小图片有些宽有些高是不一定相同的 简单让图片自己做适应就不对了 解决办法 我就让后四张图片的高等于第一张图片的高*/
+                    width: 100%;
+                    /*为什么后四张朝下摆 因为图片高度没继承父级*/
+                    height: 100%;
+                }
+
+            }
+
+            navigator.tidiness {
+                /*原图的宽高232*386*/
+                // 232 /386 = 33.33vw /height;
+                // 第一张图片的高度 height:33.33vw*386/232
+                height: 33.33vw*386/232/2;
+                border-left: 10rpx solid #fff;
+            }
+
+        }
+    }
+}

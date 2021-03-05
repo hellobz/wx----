@@ -1,0 +1,51 @@
+page{
+  background-color: #ededed;
+}
+.info_list{
+  margin-top:20rpx;
+  padding-left:15rpx;
+  margin-bottom:40rpx;
+}
+.info_list .info_item{
+  padding:12rpx;
+  background-color: #fff;
+  font-size:24rpx;
+  font-weight:600;
+  text-align: center;
+  margin:10rpx;
+}
+.info_list .active{
+  border:1rpx solid red;
+  color:red;
+}
+
+/* 购物信息 */
+.cart_main .goods-item {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+.cart_main .goods-item .goods_left {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cart_main .goods-item .goods_left image {
+  width: 70%;
+}
+.cart_main .goods-item .goods_right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.cart_main .goods-item .goods_right .g_d_cons {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+.cart_main .goods-item .goods_right .g_d_price {
+  color: red;
+  font-size: 32rpx;
+}

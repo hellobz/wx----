@@ -1,0 +1,81 @@
+<!-- 收货地址 -->
+<view class="get_address">
+    <!-- 当收货地址 不存在 按钮显示 对象 空对象 bool类型也是true 那就看它下面的属性的值是否存在-->
+  <view class="btn_address" wx:if="{{!address.userName}}">
+    <button bindtap="handleAddTo" type="primary" plain>添加收获地址</button>
+
+  </view>
+
+  <!-- 当收货地址 存在 详细信息显示 -->
+  <view class="add_address" wx:else>
+     <view class="user_info">
+       <view>收货人:{{address.userName}}</view>
+       <view>{{address.all}}</view>
+     </view>
+     <view class="user_tel">
+       {{address.telNumber}}
+     </view>
+  </view>
+</view>
+
+<!-- 购物车信息 -->
+<view class="cart_content">
+  <view class="cart_title">
+    购物车
+  </view>
+  <view class="cart_main">
+    <!-- 当info数组 长度不为0 显示商品信息 否则显示提示 -->
+    <block wx:if="{{info.length !== 0}}">
+      <view class="cart_main_item" wx:for="{{info}}" wx:key="goods_id">
+        <!-- 复选框 -->
+        <view class="cart_select">
+          <checkbox-group data-id="{{item.goods_id}}" bindchange="handleGoodsChange">
+             <checkbox checked="{{item.ifCheck}}"></checkbox>
+          </checkbox-group>
+        
+        </view>
+        <!-- 商品图片 -->
+        <navigator class="cart_photo" url="">
+            <image mode="widthFix" src="{{item.goods_small_logo}}"></image>
+        </navigator>
+        <!-- 商品信息 -->
+        <view class="cart_info">
+            <view class="goods_name">{{item.goods_name}}</view>
+            <view class="goods_intro_group">
+              <view class="goods_price">￥{{item.goods_price}}</view>
+              <view class="goods_select">
+                <view class="edit" data-id="{{item.goods_id}}" data-operation="{{-1}}" bindtap="handleChangGoods">-</view>
+                <view class="g_s_num">{{item.num}}</view>
+                <view class="edit" data-id="{{item.goods_id}}" data-operation="{{1}}" bindtap="handleChangGoods">+</view>
+              </view>
+            </view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:else>
+        <image mode="widthFix" src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599196209252&di=1ff588ec61b9097af88661c1cafd0d59&imgtype=0&src=http%3A%2F%2Fhbimg.b0.upaiyun.com%2Fe1b1467beea0a9c7d6a56b32bac6d7e5dcd914f7c3e6-YTwUd6_fw658"></image>
+    </block>
+  </view>
+</view>
+
+<!-- 底部工具栏 -->
+<view class="footer_tool">
+  <view class="all_select">
+    <checkbox-group bindchange="handleAllCheck">
+      <checkbox checked="{{allCheck}}">全选</checkbox>
+   </checkbox-group>   
+  </view>
+  <view class="total">
+    <view class="total_top">
+      <text class="total_t_comp">合计:</text>
+      <text class="total_t_price">￥{{totalPrice}}</text>
+    </view >
+    <view class="total_bottom">
+      包含运费
+    </view>
+  </view>
+  <view class="settle" bindtap="handleSettle">
+    结算({{totalNum}})
+  </view>
+</view>

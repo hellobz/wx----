@@ -1,0 +1,3 @@
+.auth_item{
+  padding:40rpx;
+}

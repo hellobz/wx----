@@ -1,0 +1,4 @@
+<view class="search_input">
+    <!--超链接标签-->
+    <navigator url="/pages/search/search" open-type="navigate">搜索</navigator>
+</view>
